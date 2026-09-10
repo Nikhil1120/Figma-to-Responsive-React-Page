@@ -1,0 +1,369 @@
+.content-split {
+  background: var(--cream);
+  padding: 0 0 60px;
+}
+
+.cs-sky {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.cs-blue-line {
+  position: absolute;
+  left: 0;
+  top: 48%;
+  width: 100%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding: 48px 0 0;
+}
+
+.cs-copy h3 {
+  font-size: 28px;
+  color: var(--plum-800);
+  margin-bottom: 18px;
+}
+.cs-copy p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(33, 19, 52, 0.8);
+  max-width: 60ch;
+}
+.cs-learn {
+  margin-top: 18px;
+  display: inline-block;
+}
+
+.cs-visual {
+  position: relative;
+  min-height: 220px;
+}
+.cs-rightside {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 420px;
+  z-index: 2;
+}
+
+.product-stage {
+  position: relative;
+  margin-top: 36px;
+  height: 360px;
+  z-index: 3;
+}
+.cs-bottom {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50;
+  width: 80%;
+  object-fit: cover;
+}
+
+.cs-thumbs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6%;
+  display: flex;
+  gap: 10px;
+}
+.cs-thumbs img {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px;
+}
+
+@media (max-width: 760px) {
+  .cs-grid {
+    grid-template-columns: 1fr;
+  }
+  .cs-rightside {
+    display: none;
+  }
+  .product-stage {
+    height: 280px;
+  }
+}
+
+/* small left sky and full-width bottom decoration added below the wrap */
+.cs-side-container {
+  padding: 0;
+  margin: 0;
+}
+.cs-bottom-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+.cs-side-sky {
+  width: 220px;
+  display: block;
+}
+.cs-bottom-full {
+  display: block;
+  width: 100vw;
+  max-width: 100%;
+  margin-left: calc(50% - 50vw);
+  object-fit: cover;
+  margin-top: -28px;
+  margin-bottom: 0;
+}
+
+.cs-component-art {
+  position: relative;
+  width: 100%;
+  background: #dfeef4;
+  border: 2px solid #7a2a93;
+  border-top: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cs-component-base,
+.cs-component-text {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.cs-component-base {
+  position: relative;
+  z-index: 1;
+}
+
+.cs-component-text {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.cs-component-banner {
+  width: 100%;
+  background: #f7f3ef;
+}
+
+.cs-component-banner-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cs-video-row-wrap {
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  background: #dfeef4;
+  border-top: 3px solid #1ab3d2;
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+.cs-video-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+}
+
+.cs-video-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  background: #f5f3f1;
+  text-decoration: none;
+  border-right: 1px solid rgba(38, 24, 52, 0.14);
+  border-bottom: 1px solid rgba(38, 24, 52, 0.14);
+}
+
+.cs-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  background: #d8dbe0;
+}
+
+.cs-video-label {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #231a31;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+}
+
+.cs-sky-banner {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  background: #dfeef4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cs-sky-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.cs-sky-badge-wrap {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: rgba(26, 18, 36, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.15);
+  z-index: 1;
+}
+
+.cs-sky-badge {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cs-sky-banner-copy {
+  position: relative;
+  z-index: 1;
+  padding-top: 160px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cs-sky-banner-kicker {
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: rgba(34, 18, 38, 0.85);
+}
+
+.cs-sky-banner-copy h2 {
+  font-size: clamp(34px, 4vw, 64px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: #191323;
+  font-weight: 800;
+}
+
+.cs-sky-banner-copy h2 span {
+  display: block;
+  color: #1bb3d8;
+}
+
+.cs-sky-banner-copy p {
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(24, 19, 34, 0.8);
+}
+
+.cs-inline-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  gap: 12px;
+  padding: 0 12px 12px;
+  box-sizing: border-box;
+}
+
+.cs-inline-gallery-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  background: #e9eef2;
+  border-radius: 0;
+}
+
+.cs-next-gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.cs-next-gallery-item {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background: #e9eef2;
+}
+
+.cs-next-single {
+  width: 100%;
+  padding: 0 12px 12px;
+  box-sizing: border-box;
+}
+
+.cs-next-single-item {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background: #e9eef2;
+}
+
+@media (max-width: 760px) {
+  .cs-side-sky {
+    width: 140px;
+    margin: 0 auto;
+    display: block;
+  }
+  .cs-bottom-full {
+    margin-left: 0;
+    width: 100%;
+  }
+}

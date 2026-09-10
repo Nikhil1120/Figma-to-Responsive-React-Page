@@ -1,0 +1,30 @@
+.layered-section {
+  position: relative;
+  display: grid;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.layered-section__base,
+.layered-section__overlay {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.layered-section__base {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.layered-section__overlay {
+  place-self: center;
+  width: min(100%, 1120px);
+  height: auto;
+  max-height: 85%;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+  z-index: 1;
+}

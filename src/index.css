@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Pacifico&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #211334;
+  --plum-950: #2c1441;
+  --plum-800: #4a1f68;
+  --plum-600: #6d2f96;
+  --violet-500: #8a4fc2;
+  --lilac-100: #f3ecfb;
+  --lilac-50: #faf7fe;
+  --teal-500: #23c4d6;
+  --teal-600: #12a9bb;
+  --sun-500: #f2a53c;
+  --cream: #fffdf9;
+  --paper: #ffffff;
+  --line: rgba(33, 19, 52, 0.1);
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-script: "Pacifico", cursive;
+
+  --max-w: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--violet-500);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 13px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1.5px solid transparent;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-teal {
+  background: var(--teal-500);
+  color: #06282c;
+  box-shadow: 0 10px 24px -12px rgba(18, 169, 187, 0.7);
+}
+.btn-teal:hover {
+  background: var(--teal-600);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: currentColor;
+  color: var(--plum-800);
+}
+
+.btn-outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--ink);
+  color: #fff;
+}
+
+section {
+  position: relative;
+}
+
+.divider-wave {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+@media (max-width: 860px) {
+  .wrap {
+    padding: 0 20px;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal-600);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

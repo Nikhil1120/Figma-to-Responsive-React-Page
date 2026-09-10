@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(
+    120% 140% at 50% -10%,
+    #6d2f96 0%,
+    #3a1a54 45%,
+    #1c0e2c 100%
+  );
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgba(255, 255, 255, 0.16),
+    transparent 55%
+  );
+  pointer-events: none;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72vh; /* make video shorter so divider sits at its bottom */
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 140px 0 140px;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: clamp(28px, 4.4vw, 46px);
+  font-style: italic;
+  color: #f4ecff;
+  max-width: 780px;
+}
+
+.divider-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* attach to bottom of the hero section */
+  z-index: 2;
+  transform: translateY(1px);
+}
+
+/* ensure hero section leaves space below video for the divider and initial content */
+.hero {
+  padding-top: 20px; /* small top padding so content sits nicely */
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 70px;
+  }
+  .hero-content {
+    padding-bottom: 90px;
+  }
+}

@@ -1,0 +1,66 @@
+.dome-section {
+  background: var(--cream);
+}
+
+.dome {
+  max-width: 760px;
+  margin: -1px auto 0;
+  background: radial-gradient(120% 100% at 50% 0%, #6d2f96 0%, #3a1a54 70%);
+  border-radius: 0 0 50% 50% / 0 0 30% 30%;
+  padding: 60px 40px 70px;
+  text-align: center;
+  color: #fff;
+}
+
+.dome-bottles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.dome-bottle-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.dome-bottle-card span {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+}
+
+.dome-icons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 10px 0 34px;
+}
+
+.dome-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.14);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dome-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(18px, 2.6vw, 24px);
+  color: #f4ecff;
+  max-width: 34ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 560px) {
+  .dome { padding: 46px 24px 56px; border-radius: 0 0 40% 40% / 0 0 20% 20%; }
+  .dome-bottles { gap: 20px; }
+}

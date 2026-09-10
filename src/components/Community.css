@@ -1,0 +1,66 @@
+.community {
+  background: linear-gradient(180deg, #23c4d6 0%, #4fd3e0 100%);
+  padding: 90px 0;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.community-photo {
+  height: 420px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(10, 40, 44, 0.5);
+}
+
+.eyebrow-light { color: #06282c; opacity: 0.7; }
+
+.community-copy h2 {
+  font-size: clamp(26px, 3.6vw, 36px);
+  color: #06282c;
+  margin: 8px 0 30px;
+  font-style: italic;
+}
+
+.community-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.review-card {
+  background: #0d3a41;
+  color: #eafcff;
+  border-radius: 18px;
+  padding: 22px 26px;
+  max-width: 480px;
+}
+
+.review-stars {
+  color: #f2a53c;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.review-card p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  color: rgba(234, 252, 255, 0.9);
+}
+
+.review-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4fd3e0;
+}
+
+@media (max-width: 860px) {
+  .community-grid { grid-template-columns: 1fr; }
+  .community-photo { height: 300px; }
+}

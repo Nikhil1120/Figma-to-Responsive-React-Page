@@ -1,0 +1,55 @@
+.hair-types {
+  background: var(--lilac-50);
+  padding: 90px 0;
+}
+
+.hair-types-heading {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 44px;
+}
+
+.hair-types-heading h2 {
+  font-size: clamp(26px, 3.4vw, 34px);
+  margin: 8px 0 16px;
+  font-style: italic;
+  color: var(--ink);
+}
+
+.hair-types-heading h2 span { color: var(--plum-600); }
+
+.hair-types-heading p {
+  font-size: 15px;
+  color: rgba(33,19,52,0.68);
+  line-height: 1.7;
+}
+
+.hair-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.hair-type-card {
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.hair-type-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 26px;
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .hair-types-grid { grid-template-columns: 1fr; }
+}
